@@ -1,0 +1,89 @@
+/*------------------------------------------------------------------
+ [Master Stylesheet]
+
+  Project:	Label Admin Template Free
+  Version:	1.0
+-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+  ===== Table of Contents =====
+
+  * Bootstrap Functions & Variables
+  * Theme Variables
+  * Bootstrap Main
+  * Core Files And Mixins
+  * Component Styles
+    + Badge
+    + Breadcrumbs
+    + Buttons
+    + Cards
+    + Dropdowns
+    + Checkbox Radio
+    + Inputs
+    + Progress Bars
+    + Tables
+    + Timeline
+    + Tooltip
+  * Template
+  * Utilities
+  * Demo
+  * Pages
+    + Authentication Pages
+    + Error Pages
+    + Dashboard
+    + Documentation
+
+-------------------------------------------------------------------*/
+
+
+/* === Bootstrap Functions & Variables === */
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+/*-------------------------------------------------------------------*/
+
+
+/* === Theme Variables === */
+@import "core/variables";
+/*-------------------------------------------------------------------*/
+
+
+/* === Bootstrap Main === */
+@import "../../../../node_modules/bootstrap/scss/bootstrap";
+/*-------------------------------------------------------------------*/
+
+
+/* === Core Files And Mixins === */
+@import "core/mixins/mixins";
+@import "core/reset";
+@import "core/fonts";
+@import "core/spacing";
+@import "core/typography";
+@import "core/animation";
+/*-------------------------------------------------------------------*/
+
+
+/* === Component Styles === */
+@import "components/badge";
+@import "components/breadcrumb";
+@import "components/button";
+@import "components/card";
+@import "components/checkbox-radio";
+@import "components/dropdown";
+@import "components/input";
+@import "components/progress";
+@import "components/table";
+@import "components/timeline";
+@import "components/tooltip";
+/*-------------------------------------------------------------------*/
+
+@import "template";
+@import "utilities";
+@import "demo";
+
+
+/* === Pages === */
+@import "pages/auth-theme";
+@import "pages/error";
+@import "pages/dashboard";
+@import "pages/docs";
+/*-------------------------------------------------------------------*/

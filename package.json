@@ -1,0 +1,50 @@
+{
+  "name": "label",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {
+    "@mdi/font": "^3.3.92",
+    "apexcharts": "^2.6.0",
+    "bootstrap": "^4.3.1",
+    "chart.js": "^2.7.3",
+    "font-awesome": "^4.7.0",
+    "highlight.js": "^9.13.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.6"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "del": "2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-html-replace": "^1.6.2",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-inject": "^4.3.1",
+    "gulp-inject-partials": "^1.0.4",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-prettify": "^0.5.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.1",
+    "gulp-util": "^3.0.8",
+    "merge-stream": "^1.0.1",
+    "minimatch": "^3.0.4",
+    "pump": "^3.0.0",
+    "require-dir": "^1.0.0",
+    "run-sequence": "^2.2.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "UXcandy",
+  "url": "http://www.uxcandy.co",
+  "copyright": "",
+  "license": ""
+}

@@ -1,0 +1,10 @@
+@mixin bg-inverse-variant($color) {
+    background: rgba($color, 0.2);
+}
+
+@each $color,
+$value in $theme-colors {
+    .bg-inverse-#{$color} {
+        @include bg-inverse-variant(theme-color($color));
+    }
+}

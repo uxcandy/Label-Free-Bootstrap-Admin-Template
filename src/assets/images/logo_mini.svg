@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Logo Element</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Logo-Element" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill="#575DFA" x="0" y="0" width="26" height="26" rx="4"></rect>
+        <text id="." font-family="Montserrat-Black, Montserrat Black" font-size="23" font-weight="700" fill="#DB504A">
+            <tspan x="14" y="23">.</tspan>
+        </text>
+        <text id="L" font-family="ArialRoundedMTBold, Arial Rounded MT Bold" font-size="23" font-weight="normal" fill="#FFFFFF">
+            <tspan x="6" y="20">L</tspan>
+        </text>
+    </g>
+</svg>

@@ -1,0 +1,42 @@
+@mixin dropdownFadeIn {
+  @keyframes dropdownFadeIn {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -15px, 0);
+    }
+
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .dropdownFadeIn {
+    animation-name: dropdownFadeIn;
+  }
+}
+
+@mixin layout-transitions {
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+@mixin menuItemFadeIn {
+  @keyframes menuItemFadeIn {
+    from {
+      transform: translate3d(-20px, 0, 0);
+      display: none;
+      opacity: 0;
+    }
+
+    to {
+      display: block;
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+
+  animation-name: menuItemFadeIn;
+  animation-duration:$sidebar-animation-duration;
+  animation-fill-mode:both;
+}

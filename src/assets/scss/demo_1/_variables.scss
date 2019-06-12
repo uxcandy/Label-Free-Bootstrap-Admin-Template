@@ -1,0 +1,31 @@
+////////// SIDEBAR VARIABLES //////////
+$sidebar-width: 17rem; //Set fixed width for sidebar in desktop
+$sidebar-mobile-width: 15rem; //Set fixed width for sidebar in mobile
+$sidebar-bg: $template-base-color;
+$sidebar-boder-seperator-color: #f2f4f9;
+$logo-width: 80px;
+$logo-mini-width: 35px;
+$brand-header-bg: $sidebar-bg;
+$sidebar-animation-duration: 0.25s;
+$sidebar-link-color: #525c5d;
+$sidebar-active-link-color: theme-color(success);
+$sidebar-link-submenu-bg: darken($brand-header-bg, 2%);
+$sidebar-link-active-bg: darken($brand-header-bg, 4%);
+$sidebar-link-padding-top: 12px;
+$sidebar-link-padding-right: 30px;
+$sidebar-link-padding-bottom: 12px;
+$sidebar-link-padding-left: 30px;
+$sidebar-link-line-height: 1;
+$sidebar-link-font-size: 13px;
+$sidebar-link-font-family: $font-family-sans-serif;
+$sidebar-minimized-width: 4rem;
+$sidebar-minimized-link-padding-right: 0.94rem;
+$sidebar-minimized-link-padding-left: 0.94rem;
+$sidebar-footer-bg:darken($sidebar-bg, 0%);
+////////// SIDEBAR VARIABLES //////////
+
+////////// HEADER VARIABLES //////////
+$header-height: 65px;
+$header-bg: $template-body-color; //Sets a background color for header
+$header-zindex: 100;
+////////// HEADER VARIABLES //////////

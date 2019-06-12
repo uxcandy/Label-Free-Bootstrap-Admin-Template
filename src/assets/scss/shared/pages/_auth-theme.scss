@@ -1,0 +1,46 @@
+/* Authentication Pages */
+
+.authentication-theme {
+    .signup-link {
+        margin: 20px auto 0px auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+
+        a {
+            display: inline-block;
+            margin-left: 10px;
+        }
+    }
+
+    .auth_footer {
+        margin-top: 30px;
+    }
+
+    &.auth-style_1 {
+        min-height: 100vh;
+        width: 100%;
+        background: $template-body-color;
+        padding: 10% 0 2px 0;
+
+        .logo-section {
+            margin-bottom: 50px;
+        }
+
+        .grid-body {
+            padding: 60px 15px;
+            position: relative;
+
+            .form-wrapper {
+                position: unset;
+            }
+        }
+
+        .signup-link {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+        }
+    }
+}

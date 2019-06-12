@@ -1,0 +1,141 @@
+/* Tables */
+
+.table,
+table {
+  margin-bottom: 0;
+
+  thead,
+  tfoot {
+
+    tr {
+      th {
+        border-bottom-width: 1px;
+        @include ms-respond(font-size, -2);
+        font-weight: 500;
+      }
+    }
+  }
+
+
+  tbody {
+    tr {
+      transition-duration: $table-hover-transition;
+
+      td {
+        @include ms-respond(font-size, -2);
+        vertical-align: middle;
+
+        .input-frame {
+          &:after {
+            top: 5px;
+          }
+        }
+
+        span {
+          display: flex;
+          align-items: center;
+
+          .status-indicator {
+            margin-right: 5px;
+          }
+        }
+
+        .image {
+          max-width: 75px;
+          width: 100%;
+        }
+      }
+
+      &.text-align-edge {
+        td {
+          &:first-child {
+            padding-left: 0;
+            text-align: left;
+          }
+
+          &:last-child {
+            padding-right: 0;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+  th,
+  td {
+    white-space: nowrap;
+  }
+
+  &:not(.table-dark) {
+    thead {
+      tr {
+        &.solid-header {
+          th {
+            background: darken($card-bg, 2%);
+            border-top: $border-width $border-style $border-color;
+          }
+        }
+      }
+    }
+
+    thead,
+    tfoot {
+      background: $table-head-bg;
+
+      tr {
+        th {
+          background: $body-accent-color;
+          color: $table-cell-color;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        &[class*='bg'] {
+          box-shadow: $component-box-shadow;
+
+          td {
+            color: $body-accent-color;
+            border: none;
+          }
+        }
+
+        td {
+          color: $table-cell-color;
+        }
+      }
+    }
+  }
+
+  &:not(.table-bordered) {
+
+    thead,
+    tfoot {
+      tr {
+        th {
+          border-top: none;
+        }
+      }
+    }
+  }
+
+  &.info-table {
+    tr {
+
+      td,
+      th {
+        text-align: right;
+
+        &:first-child {
+          text-align: left;
+        }
+
+        &.actions {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}

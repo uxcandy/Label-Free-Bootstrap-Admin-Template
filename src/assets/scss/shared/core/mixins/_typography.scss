@@ -1,0 +1,8 @@
+@mixin font-size($font-size: null) {
+  @if unit($font-size) !="null" {
+    $font-size-value: $font-size;
+    $font-size-unit-value: $font-size / $font-base-rem-value;
+    $font-size-rem-value: $font-size-unit-value + rem;
+    font-size: $font-size-rem-value;
+  }
+}

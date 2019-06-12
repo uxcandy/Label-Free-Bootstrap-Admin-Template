@@ -1,0 +1,20 @@
+/* Progress Bars */
+
+.progress {
+  border-radius: 10px;
+  height: 13px;
+  background: $progress-bg;
+
+  .progress-bar {
+    font-weight:500;
+
+    &:last-child {
+      border-radius: 0 10px 10px 0;
+      box-shadow: $component-box-shadow;
+    }
+  }
+
+  &.progress-slim {
+    height: 5px;
+  }
+}

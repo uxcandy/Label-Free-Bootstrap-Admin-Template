@@ -1,0 +1,305 @@
+/* Buttons */
+
+@function social-color($key: "twitter") {
+  @return map-get($social-colors, $key);
+}
+
+@mixin social-button($color) {
+  background: $color;
+  border: none;
+  color: $body-text-inverse-color;
+
+  &:hover {
+    background: darken($color, 10%);
+  }
+
+  &.btn-link {
+    background: none;
+    color: $color;
+
+    &:hover {
+      color: darken($color, 10%);
+    }
+  }
+}
+
+@mixin social-button-outlined($color) {
+  border: 2px $border-style $color;
+  color: $body-text-color;
+
+  i {
+    color: $color;
+  }
+
+  &.btn-link {
+    background: none;
+    color: $color;
+
+    &:hover {
+      color: darken($color, 10%);
+    }
+  }
+}
+
+@each $color,
+$value in $social-colors {
+  .btn:not(.social-icon-btn).social-btn-outlined.btn-#{$color} {
+    @include social-button-outlined(social-color($color));
+  }
+}
+
+@mixin btn-inverse-variant($color) {
+  background: rgba($color, 0.15);
+  color: $color;
+
+  i {
+    color: inherit;
+  }
+
+  &:hover {
+    background: rgba($color, 0.8);
+    color: $body-text-inverse-color;
+  }
+}
+
+@each $color,
+$value in $theme-colors {
+  .btn-inverse-#{$color} {
+    @include btn-inverse-variant(theme-color($color));
+  }
+}
+
+@each $color,
+$value in $social-colors {
+  .btn:not(.social-btn-outlined).btn-#{$color} {
+    @include social-button(social-color($color));
+  }
+}
+
+@mixin radio-button-group($color) {
+  &:not(:disabled):not(.disabled) {
+    &.active {
+      background: darken($color, 20%);
+    }
+  }
+}
+
+@mixin btn-outline-variation($color) {
+  border: 2px $border-style $color;
+}
+
+@each $color,
+$value in $theme-colors {
+  .btn-group label.btn.btn-#{$color} {
+    @include radio-button-group($value);
+  }
+}
+
+@each $color,
+$value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include btn-outline-variation($value);
+  }
+}
+
+.btn-group {
+  label.btn {
+    input {
+      display: none;
+    }
+
+  }
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+  transition-property: "background", "color";
+  @include font-size(14);
+  font-weight: 600;
+  letter-spacing: $letter-spacing;
+
+  &:not([class*='btn-inverse']):not(.component-flat) {
+    box-shadow: $component-box-shadow;
+  }
+
+  i {
+    @include font-size(20);
+  }
+
+  &.btn-lg {
+    height: 55px;
+    max-height: 55px;
+    padding: 15px 30px;
+    @include font-size(18);
+  }
+
+  &.btn-sm {
+    height: 35px;
+    max-height: 35px;
+    padding: 4px 15px;
+    @include font-size(14);
+
+  }
+
+  &.btn-xs {
+    height: 25px;
+    max-height: 25px;
+    padding: 0px 10px;
+    line-height: 1;
+    @include font-size(12);
+
+    &.has-icon {
+
+      span,
+      i {
+        @include font-size(13);
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &:not(.btn-refresh, .dropdown-dotted-list) {
+    height: 40px;
+    max-height: 40px;
+    padding: 5px 20px;
+  }
+
+  &.active {
+    box-shadow: none;
+  }
+
+  &.social-icon-btn {
+    height: 40px;
+    width: 40px;
+  }
+
+  &.social-btn {
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  &.social-btn-outlined {
+    i {
+      margin-right: 10px;
+    }
+  }
+
+  &.has-icon {
+
+    span,
+    i {
+      @include font-size(20);
+      margin-right: 10px;
+      line-height: 1;
+    }
+  }
+
+  &.btn-outline-secondary {
+    color: darken(theme-color(secondary), 40%);
+    border-color: darken(theme-color(secondary), 10%);
+  }
+
+  &.btn-warning,
+  &.btn-info,
+  &.btn-success {
+    color: $white;
+  }
+
+  &.btn-secondary {
+    color: color(gray);
+  }
+
+  &.btn-light {
+    background: $body-accent-color;
+    color: invert($body-accent-color);
+  }
+
+  &.dropdown-dotted-list {
+    background: $body-text-inverse-color;
+  }
+
+  &.dropdown-toggle-split {
+    padding: 0 8px;
+  }
+
+  &.action-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 40px;
+    width: 40px;
+
+    i {
+      font-size: 1.25rem;
+      width: 26px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: 23px;
+      vertical-align: middle;
+
+      &:before {
+        width: inherit;
+        height: inherit;
+        line-height: inherit;
+        font-size: inherit;
+      }
+
+      @include font-size(20);
+    }
+
+    &.btn-xs {
+      height: 30px;
+      width: 30px;
+    }
+
+    &.btn-sm {
+      height: 35px;
+      width: 35px;
+    }
+
+    &.btn-lg {
+      height: 50px;
+      width: 50px;
+
+      i {
+        @include font-size(30);
+        line-height: 24px;
+      }
+    }
+
+    &.btn-refresh {
+      &.clicked {
+        i {
+          color: theme-color(primary);
+          animation: rotate360 0.8s linear infinite;
+        }
+      }
+    }
+
+    &.btn-like {
+      &.clicked {
+
+        i {
+          color: theme-color(danger);
+          animation: bounceIn 0.8s linear 1;
+        }
+
+        &:hover {
+          i {
+            color: $body-text-inverse-color;
+          }
+        }
+      }
+    }
+  }
+
+  &.btn-rounded {
+    border-radius: 50px;
+  }
+}

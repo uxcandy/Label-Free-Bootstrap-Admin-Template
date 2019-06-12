@@ -1,0 +1,10 @@
+/* Cards */
+
+.card {
+  background: $card-bg;
+  border: none;
+
+  &.card-bordered {
+    border: $styled-border;
+  }
+}

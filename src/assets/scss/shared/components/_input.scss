@@ -1,0 +1,107 @@
+/* Inputs */
+
+.form-control {
+    padding-left: 20px;
+    padding-right: 20px;
+    color: rgba($body-text-color, 0.8);
+
+    @include input-placeholder {
+        font-weight: inherit;
+        color: inherit;
+        font-size: inherit;
+    }
+
+    &.is-invalid {
+        background-color: $input-invalid-bg;
+        border: none;
+    }
+
+    &.is-valid {
+        background-color: $input-valid-bg;
+        border: none;
+    }
+}
+
+.input-group-text {
+    background-color: $input-bg;
+    color: $body-text-color;
+    border-color: $border-color;
+    padding: 0px 10px;
+    font-size: 17px;
+
+    .is-valid & {
+        background-color: $input-valid-bg;
+        color: $input-valid-color;
+    }
+
+    .is-invalid & {
+        background-color: $input-invalid-bg;
+        color: $input-invalid-color;
+    }
+}
+
+.form-group {
+    margin-bottom: 20px;
+
+    &.input-rounded {
+        .form-control {
+            border-radius: 25px;
+        }
+    }
+}
+
+.custom-file {
+    .custom-file-label {
+        padding: 8px 0.75rem;
+        height: 41px;
+
+        &:after {
+            padding: 1.45rem 0.8rem;
+            line-height: 0px;
+        }
+    }
+}
+
+.custom-select,
+.custom-select[multiple] {
+    background: $input-bg;
+    border-color: $input-border-color;
+    color: rgba($body-text-color, 0.8);
+
+    option {
+        background: $input-bg;
+        color: rgba($body-text-color, 0.8);
+        display: block;
+        border-bottom: $border-width $border-style $border-color;
+        padding: 5px 10px;
+
+        &:checked {
+            background: $input-bg;
+        }
+    }
+
+    option[selected] {
+        background: $input-bg;
+        display: block;
+    }
+}
+
+.custom-select[multiple] {
+    padding: 0;
+    border-radius: $border-radius;
+}
+
+.custom-control-input {
+    &:focus~.custom-control-label::before {
+        box-shadow: none;
+    }
+}
+
+.custom-switch {
+    .custom-control-label {
+        &::after {
+            box-shadow: $component-box-shadow;
+            background: theme-color(primary);
+        }
+    }
+}

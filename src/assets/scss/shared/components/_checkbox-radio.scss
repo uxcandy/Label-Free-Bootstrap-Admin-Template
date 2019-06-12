@@ -1,0 +1,254 @@
+/* Checkbox Radio */
+
+.checkbox,
+.radio {
+    position: relative;
+    display: block;
+    margin-top: 2px;
+    margin-bottom: 20px;
+
+    label {
+        display: block;
+        padding-left: 30px;
+        line-height: 1.42857143;
+        @include font-size(14);
+
+        input {
+            position: absolute;
+            margin-left: -20px;
+            margin-top: 4px\9;
+            top: 0;
+            left: 0;
+            margin-left: 0 !important;
+            z-index: 1;
+            cursor: pointer;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            margin-top: 0;
+
+            &:checked {
+                +.input-frame {
+                    &:before {
+                        background-color: $body-accent-color;
+                    }
+
+                    &:after {
+                        color: theme-color(primary);
+                        opacity: 1;
+                        line-height: 1.5;
+                        filter: alpha(opacity=100);
+                        transform: scale(1);
+                    }
+                }
+            }
+
+            &:disabled {
+                +.input-frame {
+                    &:before {
+                        border-color: $border-light-color;
+                    }
+                }
+
+                &:checked {
+                    +.input-frame {
+                        &:before {
+                            background: theme-color(primary);
+                        }
+                    }
+                }
+            }
+        }
+
+        .input-frame {
+            &:before {
+                position: absolute;
+                content: "";
+                top: 0;
+                width: 19px;
+                height: 19px;
+                border-radius: 2px;
+                left: 0;
+                border: 2px $border-style $border-color;
+                transition: all;
+                transition-duration: 250ms;
+            }
+
+            &:after {
+                line-height: 1.5;
+                transition: all;
+                transition-duration: 250ms;
+                font-family: Material Design Icons;
+                opacity: 0;
+                filter: alpha(opacity=0);
+                transform: scale(0);
+                content: '\F12C';
+                position: absolute;
+                @include font-size(15);
+                left: 1px;
+                top: -2px;
+                color: $body-text-inverse-color;
+            }
+        }
+    }
+}
+
+.checkbox {
+    label {
+        font-size: $font-base-rem-value;
+        line-height: 1.5;
+        padding-left: 30px;
+
+        input {
+            &:checked {
+                +.input-helper {
+                    &:before {
+                        background-color: $body-accent-color;
+                    }
+
+                    &:after {
+                        width: 18px;
+                        opacity: 1;
+                        line-height: 18px;
+                        filter: alpha(opacity=100);
+                        -webkit-transform: scale(1);
+                        -ms-transform: scale(1);
+                        -o-transform: scale(1);
+                        transform: scale(1);
+                    }
+                }
+            }
+
+            &:disabled {
+                +.input-helper {
+                    &:before {
+                        border-color: $border-color;
+                    }
+                }
+
+                &:checked {
+                    +.input-helper {
+                        &:after {
+                            color: $border-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .input-frame {
+            &:before {
+                position: absolute;
+                content: "";
+                top: 50%;
+                transform: translateY(-50%);
+                width: 18px;
+                height: 18px;
+                border-radius: 2px;
+                left: 0;
+
+                .rtl & {
+                    left: auto;
+                    right: 0;
+                }
+
+                border: 2px $border-style $border-color;
+                -webkit-transition: all;
+                -o-transition: all;
+                transition: all;
+                transition-duration: 0s;
+                -webkit-transition-duration: 250ms;
+                transition-duration: 250ms;
+            }
+
+            &:after {
+                -webkit-transition: all;
+                -o-transition: all;
+                transition: all;
+                transition-duration: 0s;
+                -webkit-transition-duration: 250ms;
+                transition-duration: 250ms;
+                font-family: Material Design Icons;
+                opacity: 0;
+                filter: alpha(opacity=0);
+                -webkit-transform: scale(0);
+                -ms-transform: scale(0);
+                -o-transform: scale(0);
+                transform: scale(0);
+                content: '\F12C';
+                position: absolute;
+                font-size: 15px;
+                font-weight: bold;
+                left: 0;
+
+                .rtl & {
+                    left: auto;
+                    right: 0;
+                }
+
+                top: 0;
+                transform:translateY(-14%);
+                color: theme-color(primary);
+            }
+        }
+    }
+}
+
+.radio {
+    label {
+        input {
+            &:checked {
+                +.input-frame {
+                    &:before {
+                        background-color: $body-accent-color;
+                    }
+                }
+
+                &:disabled {
+                    +.input-frame {
+                        &:before {
+                            background-color: $body-accent-color;
+                            border-color: $border-light-color;
+                        }
+
+                        &:after {
+                            background-color: theme-color(primary);
+                        }
+                    }
+                }
+            }
+        }
+
+        .input-frame {
+            &:before {
+                border-radius: 50%;
+            }
+
+            &:after {
+                content: "";
+                width: 9px;
+                height: 9px;
+                background: theme-color(primary);
+                border-radius: 50%;
+                top: 5px;
+                left: 5px;
+                transform: scale(0);
+            }
+        }
+    }
+}
+
+.form-inline {
+
+    .checkbox,
+    .radio {
+        margin-right: 30px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .form-check-input {
+        display: none;
+    }
+}

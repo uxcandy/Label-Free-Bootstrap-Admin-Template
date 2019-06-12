@@ -1,0 +1,210 @@
+/* Documentation */
+
+$aside-sidebar: 200px;
+
+.docs-body {
+  .doc-content-wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: $aside-sidebar auto;
+
+    .doc-aside {
+      position: sticky;
+      top: 0;
+      width: $aside-sidebar;
+      height: 100vh;
+
+      .aside-header {
+        padding: 40px 20px 60px 20px;
+        font-weight: 500;
+        @include ms-respond(font-size, -1);
+        color: $text-gray;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+          max-width: 120px;
+        }
+      }
+
+      .nav {
+        @media (min-width: 991px) {
+          display: flex !important;
+        }
+
+        flex-direction: column;
+
+        .nav-item {
+          margin-bottom: 10px;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          .nav-link {
+            padding: 10px 20px;
+            background: #fff;
+            color: $text-gray;
+            border-radius: 25px;
+            transition: 0.7s;
+            font-weight: 500;
+            letter-spacing: $letter-spacing;
+
+            &.active {
+              color: theme-color(primary);
+              background: rgba(theme-color(primary), 0.06);
+            }
+          }
+        }
+      }
+    }
+
+    .doc-content-section {
+      padding: 100px 20px 100px 20px;
+
+      .doc-content-section-inner {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 18px 30px 50px 30px;
+
+        section {
+          padding-top: 60px;
+        }
+
+        p {
+          margin-bottom: 15px;
+        }
+
+        ul {
+          li {
+            list-style-type: disc;
+          }
+        }
+
+        ul,
+        ol {
+          li {
+            margin-top: 20px;
+          }
+        }
+
+        pre {
+          display: flex;
+          width: 100%;
+          margin-top: 20px;
+
+          code {
+            width: 100%;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding: 0px;
+            background: #f9f8ff;
+            border-radius: $border-radius-lg;
+
+            &.bash {
+              background: #2e303c;
+              color: #f5f5f5;
+            }
+          }
+        }
+
+        @media (min-width: 991px) {
+          table {
+            td {
+              &:not(:first-child) {
+                white-space: normal;
+              }
+            }
+          }
+        }
+
+        h1 {
+          margin-bottom: 20px;
+          position: relative;
+          padding-bottom: 20px;
+          margin-bottom: 50px;
+          font-weight: 500;
+
+          &:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 51px;
+            height: 6px;
+            background: theme-color(primary);
+          }
+        }
+
+        h2 {
+          @include ms-respond(font-size, 2);
+          font-weight: 500;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    @media (max-width: 991px) {
+      display: block;
+
+      .doc-aside {
+        position: fixed;
+        width: 100%;
+        background: #fff;
+        z-index: 99;
+        left: 0;
+        right: 0;
+        padding: 0 15px;
+        height: auto;
+        box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.1);
+
+        .aside-header {
+          padding: 20px 15px 20px 15px;
+
+          .nav-toggle-warpper {
+            display: block;
+            padding: 10px;
+
+            .nav-toggler {
+              display: block;
+              width: 20px;
+              height: 2px;
+              background: #000;
+              transform: translateY(3px) translateX(0px);
+
+              &:before {
+                content: "";
+                height: inherit;
+                width: inherit;
+                background: inherit;
+                display: block;
+                transform: translateY(-8px) translateX(0px);
+              }
+            }
+          }
+        }
+
+        .nav {
+          display: none;
+          max-height: 300px;
+          overflow-y: auto;
+        }
+      }
+
+      .doc-content-section {
+        padding: 100px 5px 20px 5px;
+
+        .doc-content-section-inner {
+          padding-left: 0;
+          padding-right: 0;
+
+          section {
+            padding-top: 80px;
+          }
+        }
+      }
+    }
+  }
+}

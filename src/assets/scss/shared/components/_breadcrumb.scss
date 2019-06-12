@@ -1,0 +1,22 @@
+/* Breadcrumbs */
+
+.breadcrumb {
+  background: $card-bg;
+
+  &.has-arrow {
+    .breadcrumb-item {
+      &:before {
+        font-family: "Material Design Icons";
+        content: "\f142";
+        vertical-align: inherit;
+        font-weight: $font-weight-light;
+      }
+
+      &:first-child {
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}

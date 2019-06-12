@@ -1,0 +1,117 @@
+/* Typography */
+
+$modularscale: (base: 16px, ratio: 1.1,
+  768px: (base: 15px, ratio: 1.050, ),
+  991px: (base: 16px, ratio: 1.067, ),
+  1200px: (base: 16px, ratio: 1.125, ),
+);
+
+body,
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: $letter-spacing;
+  @include ms-respond(font-size, -1);
+}
+
+label,
+p {
+  letter-spacing: $letter-spacing;
+}
+
+a {
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+pre {
+  @include ms-respond(font-size, 0);
+}
+
+label,
+.checkbox label,
+.radio label {
+  color: color(gray);
+}
+
+b {
+  font-weight: $font-weight-bold;
+}
+
+small {
+  @include ms-respond(font-size, -2);
+  display: inline-block;
+  line-height: 1.4;
+}
+
+h1 {
+  @include ms-respond(font-size, 6);
+}
+
+h2 {
+  @include ms-respond(font-size, 5);
+}
+
+h3 {
+  @include ms-respond(font-size, 4);
+}
+
+h4 {
+  @include ms-respond(font-size, 3);
+}
+
+h5 {
+  @include ms-respond(font-size, 2);
+}
+
+h6 {
+  @include ms-respond(font-size, 1);
+}
+
+.display-1 {
+  @include ms-respond(font-size, 11);
+}
+
+.display-2 {
+  @include ms-respond(font-size, 10);
+}
+
+.display-3 {
+  @include ms-respond(font-size, 9);
+}
+
+.display-4 {
+  @include ms-respond(font-size, 8);
+}
+
+.display-5 {
+  @include ms-respond(font-size, 7);
+}
+
+.form-control,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="name"],
+textarea {
+  @include ms-respond(font-size, -2);
+
+
+  @include input-placeholder {
+    font-family: inherit;
+    font-size: inherit;
+    color: lighten($input-color, 25%);
+    font-weight: inherit;
+  }
+}
+
+.grid-title {
+  @include ms-respond(font-size, -1);
+}
+
+.font-weight-medium {
+  font-weight: 500 !important;
+}

@@ -1,0 +1,206 @@
+////////// FONT VARIABLES //////////
+$font-family-sans-serif: "Label",
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+"Helvetica Neue",
+Arial,
+"Noto Sans",
+sans-serif,
+"Apple Color Emoji",
+"Segoe UI Emoji",
+"Segoe UI Symbol",
+"Noto Color Emoji" !default;
+$font-family-monospace: SFMono-Regular,
+Menlo,
+Monaco,
+Consolas,
+"Liberation Mono",
+"Courier New",
+monospace !default;
+$font-family-base: $font-family-sans-serif !default;
+////////// FONT VARIABLES //////////
+
+////////// GLOBAL VARIABLES //////////
+$body-text-color: #101010;
+$body-text-inverse-color: #fff;
+$body-accent-color: #fff;
+$body-accent-text-color: theme-color(dark);
+$template-base-color: #fff; //Set base color sidebar and other components
+$template-body-color: #fbfcfd; //Sets a background color .page-content-wrapper (page viewport)
+$footer-height: 90px;
+$body-margin-x: 2.5rem; //Apply padding-left and padding-right to .page-content-wrapper (page viewport)
+$body-margin-y: 1.5rem; //Apply padding-top and padding-bottom to .page-content-wrapper (page viewport)
+$body-container-width: 1140px;
+$border-light-color: lighten($template-base-color, 75%);
+$border-dark-color: lighten($template-base-color, 5%);
+$border-radius: 2px;
+$border-radius-lg: 6px;
+$border-width: 1px;
+$border-style: solid;
+$border-color: #f2f4f9;
+$card-bg: #fff;
+$card-box-shadow:0 0 10px -5px rgba(183, 192, 206, 0.15);
+$card-border-color:rgba(238, 238, 238, 0);
+$card-title-color: #313131;
+$component-bg: darken($template-body-color, 2%);
+$component-active-bg: $blue;
+$component-active-color: $white;
+$transition-base: all 0.2s ease-in-out;
+$transition-fade: opacity 0.15s linear;
+$transition-collapse: height 0.35s ease;
+$enable-rounded: true;
+$bottom-padding: calc(#{$footer-height} + #{$body-margin-y});
+$veiwport-padding-bottom: $bottom-padding;
+////////// GLOBAL VARIABLES //////////
+
+////////// GRID SYSTEM //////////
+$grid-columns: 12; //Set the number of columns needed in a row
+$grid-gutter-width: 15px; //Sets spacing between grids
+$grid-breakpoints: (xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px);
+////////// GRID SYSTEM //////////
+
+////////// COLOR SYSTEM //////////
+$theme-colors: (primary: #696ffb,
+    secondary: #dfe8fb,
+    success: #4CCEAC,
+    info: #857bff,
+    warning: #FF6F59,
+    danger: #DB504A,
+    light: #f3f5f6,
+    dark: #223C61,
+    white: #fff);
+$social-colors: (twitter: #55acee,
+    facebook: #0084ff,
+    google: #dd4b39,
+    linkedin: #0077b5,
+    pinterest: #bd081c,
+    youtube: #cd201f,
+    github: #333333,
+    behance: #0454f6,
+    dribbble: #ea4c89,
+    reddit: #ed4333,
+    instagram: #ff759b);
+////////// COLOR SYSTEM //////////
+
+////////// LINK COLORS //////////
+$link-color: theme-color(primary);
+$link-hover-color: darken($link-color, 15%);
+$component-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.2);
+////////// LINK COLORS //////////
+
+////////// TYPOGRAPHY VARIABLES //////////
+$font-base-rem-value: 16; // Assumes the browser default, typically `16px`
+$line-height-base: 1.7;
+$letter-spacing: 0.03rem;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$text-muted: $gray-500;
+$text-gray: #565656;
+////////// TYPOGRAPHY VARIABLES //////////
+
+////////// TABLE VARIABLES //////////
+$table-cell-padding: 10px 15px;
+$table-cell-padding-sm: 10px 15px;
+$table-border-color: $border-color;
+$table-accent-bg: darken($template-body-color, 1%);
+$table-hover-bg:$table-accent-bg;
+$table-hover-transition: 0.5s;
+$table-head-bg: #e1e4e6;
+$table-head-color: $gray-700;
+$table-cell-color: $body-text-color;
+////////// TABLE VARIABLES //////////
+
+////////// FORM VARIABLES //////////
+$input-bg: darken($template-body-color, 1%);
+$input-valid-bg: rgba(theme-color(primary), 0.2);
+$input-invalid-bg: rgba(theme-color(warning), 0.2);
+$input-valid-color: theme-color(primary);
+$input-invalid-color: theme-color(warning);
+$input-disabled-bg: $gray-100;
+$input-color: $gray-600;
+$input-border-color: darken($input-bg, 2%);
+$input-focus-bg: $input-bg;
+$input-focus-border-color: darken($input-bg, 10%);
+$input-group-addon-color: $input-color;
+$input-group-addon-bg: $gray-200;
+$input-group-addon-border-color: $input-border-color;
+$input-group-btn-border-color: $input-border-color;
+$custom-file-color: $input-color;
+$custom-file-bg: $input-bg;
+$custom-file-border-color: $input-border-color;
+$custom-control-indicator-size: 1.4rem;
+$custom-switch-indicator-size:1.1rem;
+$custom-switch-width: 2.3rem;
+$custom-switch-indicator-border-radius: 25px;
+$custom-control-indicator-bg: theme-color(success);
+$custom-control-indicator-checked-bg: theme-color(success);
+$custom-control-indicator-border-color: darken($border-color, 5%);
+$custom-control-indicator-checked-border-color:$custom-control-indicator-checked-bg;
+$custom-control-indicator-bg: theme-color(success);
+$custom-control-indicator-bg:#fff;
+////////// FORM VARIABLES //////////
+
+////////// BADGE VARIABLES //////////
+$badge-font-size: 80%;
+$badge-padding-y: 0.45rem;
+$badge-padding-x: 1rem;
+$badge-pill-padding-x: 0.5rem;
+////////// BADGE VARIABLES //////////
+
+////////// PROGRESS BAR VARIABLES //////////
+$progress-bg: darken($template-body-color, 2%);
+$progress-border-radius: $border-radius;
+////////// PROGRESS BAR VARIABLES //////////
+
+////////// BREADCRUMB VARIABLES //////////
+$breadcrumb-bg: darken($template-body-color, 0.5%);
+$breadcrumb-divider-color: lighten(theme-color(dark), 20%);
+$breadcrumb-active-color: $gray-600;
+$breadcrumb-divider: "-";
+////////// BREADCRUMB VARIABLES //////////
+
+////////// CODE VARIABLES //////////
+$code-font-size: 90%;
+$code-padding-y: 0.2rem;
+$code-padding-x: 0.4rem;
+$code-color: #bd4147;
+$code-bg: $gray-100;
+$kbd-color: $white;
+$kbd-bg: $gray-900;
+$pre-color: $gray-900;
+$pre-scrollable-max-height: 340px;
+////////// CODE VARIABLES //////////
+
+////////// THEME VARIABLES //////////
+$styled-border: $border-width $border-style $border-color;
+$profile-img-width: 40px;
+$profile-img-ss-width: 15px;
+$profile-img-sm-width: 30px;
+$profile-img-lg-width: 80px;
+$profile-img-xl-width: 100px;
+////////// THEME VARIABLES //////////
+
+////////// TOOLTIP VARIABLES //////////
+$tooltip-color:$body-text-color;
+$tooltip-bg: $body-accent-color;
+$tooltip-arrow-color: $tooltip-bg;
+$tooltip-box-shadow:0px 0px 10px 2px rgba($body-text-color, 0.25);
+$tooltip-opacity: 1;
+$tooltip-padding-y: .3rem !default;
+$tooltip-padding-x: .55rem !default;
+////////// TOOLTIP VARIABLES //////////
+
+
+////////// CHARTJS VARIABLES //////////
+$dropdown-menu-shadow: 0px 5px 15px 1px rgba(0, 0, 0, 0.08);
+$dropdown-menu-bg: $body-accent-color;
+$dropdown-item-hover-bg: $template-body-color;
+////////// CHARTJS VARIABLES //////////
