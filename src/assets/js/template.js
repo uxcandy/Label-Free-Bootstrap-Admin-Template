@@ -68,3 +68,26 @@ $(".btn.btn-like").on("click", function () {
   $(this).toggleClass("clicked");
   $(this).find("i").toggleClass("mdi-heart-outline clicked").toggleClass("mdi-heart");
 });
+
+function purchaseBanner() {
+  var bannerState = localStorage.getItem('bannerState') ? localStorage.getItem('bannerState') : "enabled";
+  if (bannerState == "enabled") {
+    $("body").addClass("purchase-banner-active");
+    $("body").prepend('\
+          <div class= "item-purchase-banner">\
+            <p class="font-weight-medium banner-text">Upgrade to Premium For More Pro Features</p>\
+              <a href = "http://www.uxcandy.co/product/label-pro-admin-template/" target = "_blank" class = "banner-button btn btn-primary btn-icon" > \
+                <i class="mdi mdi-cart mr-2"></i>Buy Now\
+              </a>\
+              <span class="toggler-close"><i class="mdi mdi-close"></i></span>\
+          </div>\
+        ')
+    $(".item-purchase-banner .toggler-close").on("click", function () {
+      $(".item-purchase-banner").slideUp(300);
+      $("body").removeClass("purchase-banner-active");
+      localStorage.setItem('bannerState', "disabled");
+    });
+  }
+}
+
+purchaseBanner();

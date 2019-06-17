@@ -222,3 +222,80 @@
   display: flex;
   align-items: center;
 }
+
+.item-purchase-banner {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: $purchase-banner-height;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  z-index: 9990;
+  background-image: $purchase-banner-bg;
+  color: $purchase-banner-color;
+
+  .banner-text {
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: 15px;
+    font-weight: 400;
+    color: $purchase-banner-color;
+
+    .rtl & {
+      margin-right: auto;
+      margin-left: 15px;
+    }
+  }
+
+  .banner-button {
+    background-image: $purchase-button-bg;
+    border: none;
+    color: $purchase-banner-color;
+  }
+
+  .toggler-close {
+    margin-left: auto;
+    color: $purchase-banner-color;
+
+    .rtl & {
+      margin-right: auto;
+      margin-left: 0;
+    }
+  }
+}
+
+.sidebar-upgrade-banner {
+  margin: 0px 20px;
+  border-radius: 4px;
+  padding: 145px 20px 30px 20px;
+  background: url("../../images/pro_features_bg.svg") no-repeat;
+  background-color: rgba($template-body-color, 1);
+  background-size: 50%;
+  text-align: center;
+  background-position: center 20%;
+
+  .upgrade-btn {
+    background: $purchase-button-bg;
+    color: #fff;
+    margin-top: 30px;
+    border: none;
+  }
+}
+
+.purchase-banner-active {
+  &.header-fixed {
+    .t-header {
+      top: $purchase-banner-height;
+    }
+  }
+
+  &.docs-body {
+    padding-top: $purchase-banner-height;
+  }
+
+  .page-body {
+    top: $purchase-banner-height;
+  }
+}
